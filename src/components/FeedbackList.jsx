@@ -1,13 +1,10 @@
-import { useState } from 'react';
-import FeedbackData from '../data/FeedbackData';
 import FeedbackItem from './FeedbackItem';
 
-const FeedbackList = () => {
-  const [Feedbacks, setFeedbacks] = useState(FeedbackData);
+const FeedbackList = ({ feedbackData, handelDelete }) => {
   return (
     <>
-      {Feedbacks?.map((e) => (
-        <FeedbackItem item={e} key={e.id} />
+      {feedbackData?.map((e) => (
+        <FeedbackItem key={e.id} item={e} handelDelete={handelDelete} />
       ))}
     </>
   );
