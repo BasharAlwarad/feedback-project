@@ -211,6 +211,23 @@ input:focus {
   margin: 10px 0;
 }
 
+form ul {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  li {
+    background: white;
+    border-radius: 50%;
+    min-width: 2rem;
+    color: red;
+    font-size: 1.2rem;
+    text-align: right;
+  }
+}
+
 @media (max-width: 600px) {
   .rating li {
     margin: 10px 3px;

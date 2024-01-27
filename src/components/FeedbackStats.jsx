@@ -1,6 +1,6 @@
 const FeedbackStats = ({ feedbackData }) => {
   let averageRating = (
-    feedbackData.reduce((acc, cur) => {
+    feedbackData?.reduce((acc, cur) => {
       return acc + cur.rating;
     }, 0) / feedbackData.length
   )
