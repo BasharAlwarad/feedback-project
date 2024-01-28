@@ -3,9 +3,7 @@ import Card from './shared/Card';
 import RatingSelect from './RatingSelect';
 import Button from './shared/Button';
 
-const FeedbackForm = () => {
-  const [text, setText] = useState('');
-  const [rating, setRating] = useState(10);
+const FeedbackForm = ({ text, setText, rating, setRating, addFeedback }) => {
   const [message, setMessage] = useState('');
 
   const handelSubmit = (e) => {
@@ -14,6 +12,8 @@ const FeedbackForm = () => {
       throw new Error('Feedback must be at least 10 characters long!');
     }
     console.log(text);
+    addFeedback();
+    setText('');
   };
 
   const handelChange = (e) => {
